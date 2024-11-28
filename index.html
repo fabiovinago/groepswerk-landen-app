@@ -46,19 +46,143 @@
 </head>
 <body>
 
-<!-- Test content voor CSS -->
-<div class="text-center mt-4">
-	<h1>Dit is heading 1</h1>
-	<h2>Dit is heading 2</h2>
-	<h3>Dit is heading 3</h3>
-	<p>Dit is een paragraaf style</p>
-</div>
-<div class="text-center mt-4">
-	<button class="btn btn-primary">Dit is een knop</button>
-	<button class="btn btn-secondary">Dit is een knop</button>
-</div>
-
-
+<main>
+	<header class="shadow-sm p-3 mb-5">
+		<nav class="navbar navbar-expand-lg">
+			<div class="container">
+				<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+				<div class="collapse navbar-collapse justify-content-center" id="navbarNavAltMarkup">
+					<div class="navbar-nav">
+						<a class="nav-link active" aria-current="page" href="#">Home</a>
+						<a class="nav-link" href="#">Features</a>
+						<a class="nav-link" href="#">Pricing</a>
+					</div>
+				</div>
+			</div>
+		</nav>
+	</header>
+	<section>
+		<div class="container mt-4">
+			<div class="row">
+				<!-- Zoekbalk -->
+				<div class="col-md-6 mb-3">
+					<input type="text" class="form-control" id="searchInput" placeholder="Zoek op land...">
+				</div>
+				<!-- Filteroptie -->
+				<div class="col-md-6 mb-3">
+					<select class="form-select" id="regionFilter">
+						<option value="">Filter op regio</option>
+						<option value="Africa">Africa</option>
+						<option value="Antartica">Antartica</option>
+						<option value="Azie">Azië</option>
+						<option value="Europa">Europa</option>
+						<option value="NoordAmerika">Noord-Amerika</option>
+						<option value="Oceanie">Oceanië</option>
+						<option value="ZuidAmerika">Zuid-Amerika</option>
+					</select>
+				</div>
+			</div>
+		</div>
+	</section>
+	<div class="container mt-4">
+		<div class="row">
+			<!-- Kaartje 1 -->
+			<div class="col-lg-3 col-md-6 mb-4">
+				<div class="card">
+					<img src="FLAG_URL" class="card-img-top" alt="Country Flag">
+					<div class="card-body">
+						<h5 class="card-title">Country Name</h5>
+						<p class="card-text">
+							<strong>Region:</strong> Region Name<br>
+							<strong>Population:</strong> Population Number
+						</p>
+						<button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#countryModal">
+							View Details
+						</button>
+					</div>
+				</div>
+			</div>
+			
+			<!-- Kaartje 2 -->
+			<div class="col-lg-3 col-md-6 mb-4">
+				<div class="card">
+					<img src="FLAG_URL" class="card-img-top" alt="Country Flag">
+					<div class="card-body">
+						<h5 class="card-title">Country Name</h5>
+						<p class="card-text">
+							<strong>Region:</strong> Region Name<br>
+							<strong>Population:</strong> Population Number
+						</p>
+						<button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#countryModal">
+							View Details
+						</button>
+					</div>
+				</div>
+			</div>
+			
+			<!-- Kaartje 3 -->
+			<div class="col-lg-3 col-md-6 mb-4">
+				<div class="card">
+					<img src="FLAG_URL" class="card-img-top" alt="Country Flag">
+					<div class="card-body">
+						<h5 class="card-title">Country Name</h5>
+						<p class="card-text">
+							<strong>Region:</strong> Region Name<br>
+							<strong>Population:</strong> Population Number
+						</p>
+						<button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#countryModal">
+							View Details
+						</button>
+					</div>
+				</div>
+			</div>
+			
+			<!-- Kaartje 4 -->
+			<div class="col-lg-3 col-md-6 mb-4">
+				<div class="card">
+					<img src="FLAG_URL" class="card-img-top" alt="Country Flag">
+					<div class="card-body">
+						<h5 class="card-title">Country Name</h5>
+						<p class="card-text">
+							<strong>Region:</strong> Region Name<br>
+							<strong>Population:</strong> Population Number
+						</p>
+						<button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#countryModal">
+							View Details
+						</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<section>
+		<div class="modal fade" id="countryModal" tabindex="-1" aria-labelledby="countryModalLabel" aria-hidden="true">
+			<div class="modal-dialog modal-lg">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h5 class="modal-title" id="countryModalLabel">Country Name</h5>
+						<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+					</div>
+					<div class="modal-body">
+						<!-- Hoofdstad, talen, valuta, enz. -->
+						<p><strong>Hoofdstad:</strong> Capital Name</p>
+						<p><strong>Talen:</strong> Languages</p>
+						<p><strong>Valuta:</strong> Currency</p>
+						<p><strong>Populatie:</strong> Population Number</p>
+						<img src="FLAG_URL" class="img-fluid" alt="Country Flag">
+						<!-- Interactieve kaart -->
+						<div id="map" class="mt-3" style="height: 300px;"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+	
+	</section>
+	
+	
+</main>
 
 
 
