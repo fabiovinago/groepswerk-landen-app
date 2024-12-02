@@ -26,6 +26,23 @@
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
 	<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 	<link href="./css/style.css" rel="stylesheet">
+	
+	<script type="application/ld+json">
+		{
+			"@context": "#",
+			"@type": "Groepswerk",
+			"name": "Laurein en Fabio",
+			"address": {
+				"@type": "Syntra West",
+				"streetAddress": "111 Oostnieuwkerksesteenweg",
+				"addressLocality": "Roeselare",
+				"postalCode": "8800",
+				"addressCountry": "BE"
+			}
+		
+		}
+	</script>
+	
 </head>
 <body class="bg-light">
 <!--Header met titel en CSS animaties -->
@@ -160,16 +177,17 @@
 						<p><strong>Populatie:</strong> Population Number</p>
 						<img alt="Country Flag" class="img-fluid" src="FLAG_URL">
 						<!-- Interactieve kaart waar een marker op verschijnt op basis van de input van de gebruiker -->
-						<div class="mt-3" id="map" style="height: 300px;"></div>
+						<div class="mt-3" id="interactieve-map" style="height: 300px;"></div>
 					</div>
 				</div>
 			</div>
 		</div>
 	</section>
+	
 	<section>
 		<div class="container mt-4">
 			<div class="row justify-content-center">
-				<div class="col-md-8">
+				<div class="col-12">
 					<h2 class="text-center mb-4">Kaart van het land</h2>
 					<!-- Kaartcontainer -->
 					<div id="map" class="border rounded" style="height: 400px; width: 100%; background-color: #f0f0f0;">
