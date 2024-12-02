@@ -29,7 +29,7 @@
 	
 	<script type="application/ld+json">
 		{
-			"@context": "#",
+			"@context": "https://schema.org",
 			"@type": "Groepswerk",
 			"name": "Laurein en Fabio",
 			"address": {
@@ -61,26 +61,26 @@
 	<section class="scale-up-center input-margin">
 		<div class="row">
 			<div class="col d-flex justify-content-center align-items-center text-center">
-				<h2 class="text-focus-in">Over welk land wil je meer informatie?</h2>
+				<h2 class="text-focus-in">Which country would you like to know more about?</h2>
 			</div>
 		</div>
 		<div class="container mt-4">
 			<div class="row">
 				<!-- Zoekbalk om een land in te typen -->
 				<div class="col-md-6">
-					<input class="form-control" id="searchInput" placeholder="Zoek op land..." type="text">
+					<input class="form-control" id="searchInput" placeholder="Search by country..." type="text">
 				</div>
 				<!-- Filteroptie om landen te filteren-->
 				<div class="col-md-6 mb-3">
 					<select class="form-select" id="regionFilter">
-						<option value="">Filter op regio</option>
+						<option value="">Filter by region</option>
 						<option value="Africa">Africa</option>
 						<option value="Antartica">Antartica</option>
-						<option value="Azie">Azië</option>
-						<option value="Europa">Europa</option>
-						<option value="NoordAmerika">Noord-Amerika</option>
-						<option value="Oceanie">Oceanië</option>
-						<option value="ZuidAmerika">Zuid-Amerika</option>
+						<option value="Asia">Asia</option>
+						<option value="Europe">Europe</option>
+						<option value="NorthAmerica">North-America</option>
+						<option value="Oceania">Oceania</option>
+						<option value="SouthAmerica">South-America</option>
 					</select>
 				</div>
 			</div>
@@ -171,10 +171,10 @@
 					</div>
 					<div class="modal-body">
 						<!-- Hoofdstad, talen, valuta, populatie en country flag in de modal popup -->
-						<p><strong>Hoofdstad:</strong> Capital Name</p>
-						<p><strong>Talen:</strong> Languages</p>
-						<p><strong>Valuta:</strong> Currency</p>
-						<p><strong>Populatie:</strong> Population Number</p>
+						<p><strong>Capital:</strong> Capital Name</p>
+						<p><strong>Language:</strong> Languages</p>
+						<p><strong>Currency:</strong> Currency</p>
+						<p><strong>Population:</strong> Population Number</p>
 						<img alt="Country Flag" class="img-fluid" src="FLAG_URL">
 						<!-- Interactieve kaart waar een marker op verschijnt op basis van de input van de gebruiker -->
 						<div class="mt-3" id="interactieve-map" style="height: 300px;"></div>
@@ -188,11 +188,11 @@
 		<div class="container mt-4">
 			<div class="row justify-content-center">
 				<div class="col-12">
-					<h2 class="text-center mb-4">Kaart van het land</h2>
+					<h2 class="text-center mb-4">Country map</h2>
 					<!-- Kaartcontainer -->
 					<div id="map" class="border rounded" style="height: 400px; width: 100%; background-color: #f0f0f0;">
 						<!-- Hier wordt de kaart geladen via JavaScript -->
-						<p class="text-center mt-5">Kaart wordt geladen...</p>
+						<p class="text-center mt-5">Map is loading...</p>
 					</div>
 				</div>
 			</div>
