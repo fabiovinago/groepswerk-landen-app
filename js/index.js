@@ -25,10 +25,10 @@ function generateCards(searchCountry,searchRegion){
 
                     //Filter
                     if(
-                        //Search by country → Check if official or common name contain search word
+                        //Search by country → Check if official or common name contains search word
                         (!searchRegion&&nameOfficial.toLowerCase().includes(searchCountry.toLowerCase())) ||
                         (!searchRegion&&nameCommon.toLowerCase().includes(searchCountry.toLowerCase())) ||
-                        //Search by region
+                        //Search by region → Check if region matches or if region="All"
                         (!searchCountry&&(searchRegion===region||searchRegion==="All")) ||
                         //Search by country & by region
                         (nameOfficial.toLowerCase().includes(searchCountry.toLowerCase())&&(searchRegion===region||searchRegion==="All")) ||
@@ -126,13 +126,10 @@ const regionFilter=document.querySelector("#regionFilter");
 
 //Apply country filter
 searchInput.addEventListener("keypress", function(event){
-/*
-    let value=searchInput.value;
-    if(/[^A-Za-z\s]/.test(value.charAt(value.length-1))){
-        searchInput.value=value.slice(0,-1);
-    }
-    value=value.replace(/[^A-Za-z\s]/g,"");
-    searchInput.value=value;*/
+
+    // Disallow all characters except letters & éèçàùêë-
+    searchInput.value = searchInput.value.replace(/[^a-zA-Z\u00C0-\u017F\s-]/g, '');
+
 
     if(event.key==="Enter"){
         //Empty cardRow
