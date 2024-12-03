@@ -5,36 +5,42 @@
 	<meta content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
 	      name="viewport">
 	<meta content="ie=edge" http-equiv="X-UA-Compatible">
-	<meta content="Groepswerk advanced fronted, landen App" name="description">
-	<meta content="groepswerk, advanced frontend, app, HTMML, CSS, Bootstrap, JavaScript, API" name="keywords">
-	<meta content="Laurein Demeyere en Fabio Vinago" name="author">
+
+	<!--General SEO meta tags-->
+	<meta content="Country Application: Search and view detailed information about countries." name="description">
+	<meta content="countries, flags, capitals, currency, population, geography, country information, world countries, country details, API" name="keywords">
+	<meta content="Laurein Demeyere and Fabio Vinago" name="author">
 	<meta content="index, follow" name="robots">
 	<meta content="no-cache" http-equiv="cache-control">
-	<meta content="#" property="og:title">
-	<meta content="#" property="og:description">
+
+	<!--Open Graph meta tags-->
+	<meta content="Country Application" property="og:title">
+	<meta content="Country Application: Search and Explore Information About Countries" property="og:description">
 	<meta content="#" property="og:image">
-	<meta content="#" property="og:url">
+	<meta content="https://syntrawestcloud.be/fullstack/fabio" property="og:url">
 	<meta content="website" property="og:type">
-	<meta content="#" name="twitter:card">
-	<meta content="#" name="twitter:title">
-	<meta content="#" name="twitter:description">
+	<meta content="summary" name="twitter:card">
+	<meta content="Country Application" name="twitter:title">
+	<meta content="Country Application: Search and Explore Information About Countries" name="twitter:description">
 	<meta content="#" name="twitter:image">
-	<meta content="#" name="twitter:site">
-	<meta content="https://www.voorbeeld.com/sitemap.xml" name="sitemap">
-	
+	<meta content="https://syntrawestcloud.be/fullstack/fabio" name="twitter:site">
+
 	<!--Schema.org-->
 	<script type="application/ld+json">
 		{
 			"@context": "https://schema.org",
-			"@type": "Groepswerk",
-			"name": "Laurein en Fabio",
+			"@type": "Website",
+			"name": "Country Application",
 			"address": {
 				"@type": "Syntra West",
 				"streetAddress": "111 Oostnieuwkerksesteenweg",
 				"addressLocality": "Roeselare",
 				"postalCode": "8800",
-				"addressCountry": "BE"
-			}
+				"addressCountry": "BE"},
+			"description": "An application to view detailed information about countries around the world, including name, flag, capital, location, currency, and more.",
+			"url": "https://syntrawestcloud.be/fullstack/fabio",
+			"publisher": "Laurein and Fabio",
+			"mainEntityOfPage": "https://syntrawestcloud.be/fullstack/fabio"
 		}
 	</script>
 	
@@ -55,6 +61,7 @@
 	<!--Internal references-->
 	<script src="js/index.js" defer></script>
 	<link href="./css/style.css" rel="stylesheet">
+	<link rel="icon" href="./img/favicon.png" type="image/x-icon">
 	
 	<title>Country Application Advanced Frontend Laurein en Fabio</title>
 	
@@ -67,10 +74,10 @@
 <header class="p-3 mb-5 bg-header kenburns-top container-fluid">
 	<div class="row header-margin">
 		<div class="col d-flex flex-column align-items-center">
-			<h1 class="text-uppercase text-white text-opacity-70 fs-1 text-spacing text-focus-in" data-aos="fade-down">
+			<h1 class="text-uppercase text-center text-white text-opacity-70 fs-1 text-spacing text-focus-in" data-aos="fade-down">
 				country application</h1>
 			<p class="text-uppercase text-white fs-5 text-spacing text-focus-in" data-aos="fade-up">Laurein &amp; Fabio</p>
-			<p class="text-white fs-6 lh-1  text-focus-in" data-aos="fade-up">Advanced Frontend</p>
+			<p class="text-white fs-6 lh-1 text-focus-in" data-aos="fade-up">Advanced Frontend</p>
 		</div>
 	</div>
 </header>
@@ -83,13 +90,15 @@
 			</div>
 		</div>
 		<div class="container mt-4">
-			<div class="row">
+			<div class="row g-3">
 				<!-- Zoekbalk om een land in te typen -->
 				<div class="col-md-6">
+					<label for="searchInput" class="d-none">Search by country</label>
 					<input class="form-control" id="searchInput" placeholder="Search by country..." type="text">
 				</div>
 				<!-- Filteroptie om landen te filteren-->
 				<div class="col-md-6 mb-3">
+					<label for="regionFilter" class="d-none">Filter by region</label>
 					<select class="form-select" id="regionFilter">
 						<option value="">Filter by region</option>
 						<option value="All">All regions</option>
@@ -122,7 +131,7 @@
 					</div>
 					<div class="modal-body">
 						<!-- Hoofdstad, talen, valuta, populatie en country flag in de modal popup -->
-						<div class="d-flex justify-content-between mb-5">
+						<div class="d-flex flex-column flex-lg-row justify-content-lg-between mb-5">
 							<div>
 								<p><strong>Common name:</strong><span id="modalNameCommon" class="ms-2">N/A</span></p>
 								<p><strong>Capital:</strong><span id="modalCapital" class="ms-2">N/A</span></p>

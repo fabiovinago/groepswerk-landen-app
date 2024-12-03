@@ -124,23 +124,34 @@ function fillModal(nameOfficial,nameCommon,capital,languages,currencies,populati
 const searchInput=document.querySelector("#searchInput");
 const regionFilter=document.querySelector("#regionFilter");
 
+//Timer variables for input (see below)
+let typingTimer;
+let typingInterval=750;
+
 //Apply country filter
-searchInput.addEventListener("keypress", function(event){
+searchInput.addEventListener("input", function(event){
 
     // Disallow all characters except letters & éèçàùêë-
     searchInput.value = searchInput.value.replace(/[^a-zA-Z\u00C0-\u017F\s-]/g, '');
 
+    //Reset interval with every keypress.
+    clearInterval(typingTimer);
 
-    if(event.key==="Enter"){
-        //Empty cardRow
-        cardRow.innerHTML="";
+    //GenerateCards only executes when user finishes typing (typingInterval=0)
+    typingTimer=setTimeout(function(){
 
-        //Generate cards
-        generateCards(searchInput.value,regionFilter.value);
+        //Function not executed when search field is empty or has less than 3 characters
+        if(searchInput.value.length>=3){
+            //Empty cardRow
+            cardRow.innerHTML="";
 
-        //Reset input
-        searchInput.value="";
-    }
+            //Generate cards
+            generateCards(searchInput.value,regionFilter.value);
+
+            //Reset input
+            searchInput.value="";
+        }
+    }, typingInterval);
 })
 
 //Apply region filter
