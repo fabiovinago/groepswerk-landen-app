@@ -1,0 +1,173 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+	      name="viewport">
+	<meta content="ie=edge" http-equiv="X-UA-Compatible">
+	
+	<!--General SEO meta tags-->
+	<meta content="About page - Country Application: Search and view detailed information about countries." name="description">
+	<meta content="countries, flags, capitals, currency, population, geography, country information, world countries, country details, API" name="keywords">
+	<meta content="Laurein Demeyere and Fabio Vinago" name="author">
+	<meta content="index, follow" name="robots">
+	<meta content="no-cache" http-equiv="cache-control">
+	
+	<!--Open Graph meta tags-->
+	<meta content="Country Application" property="og:title">
+	<meta content="Country Application: Search and Explore Information About Countries" property="og:description">
+	<meta content="https://www.mapsofworld.com/style_2019/images/world-map.png?v:1" property="og:image">
+	<meta content="https://syntrawestcloud.be/fullstack/fabio" property="og:url">
+	<meta content="website" property="og:type">
+	<meta content="summary" name="twitter:card">
+	<meta content="Country Application" name="twitter:title">
+	<meta content="Country Application: Search and Explore Information About Countries" name="twitter:description">
+	<meta content="https://www.mapsofworld.com/style_2019/images/world-map.png?v:1" name="twitter:image">
+	<meta content="https://syntrawestcloud.be/fullstack/fabio" name="twitter:site">
+	
+	<!--Schema.org-->
+	<script type="application/ld+json">
+		{
+			"@context": "https://schema.org",
+			"@type": "Website",
+			"name": "Country Application",
+			"address": {
+				"@type": "Syntra West",
+				"streetAddress": "111 Oostnieuwkerksesteenweg",
+				"addressLocality": "Roeselare",
+				"postalCode": "8800",
+				"addressCountry": "BE"},
+			"description": "An application to view detailed information about countries around the world, including name, flag, capital, location, currency, and more.",
+			"url": "https://syntrawestcloud.be/fullstack/fabio",
+			"publisher": "Laurein and Fabio",
+			"mainEntityOfPage": "https://syntrawestcloud.be/fullstack/fabio"
+		}
+	</script>
+	
+	<!--Bootstrap cdn-->
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+	
+	<!--AOS cdn-->
+	<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+	
+	<!--Leaflet.js cdn-->
+	<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin=""/>
+	<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+	
+	<!--Axios cdn-->
+	<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+	
+	<!--Internal references-->
+	<script src="js/index.js" defer></script>
+	<link href="./css/style.css" rel="stylesheet">
+	<link rel="icon" href="./img/favicon.png" type="image/x-icon">
+	
+	<title>About Page - Country Application Advanced Frontend Laurein en Fabio</title>
+</head>
+<body>
+<!--Header met titel en CSS animaties -->
+<header>
+	<div class="p-3 mb-5 bg-header kenburns-top container-fluid">
+		<div class="row header-margin">
+			<div class="col d-flex flex-column align-items-center">
+				<h1 class="text-uppercase text-center text-white text-opacity-70 fs-1 text-spacing text-focus-in"
+				    data-aos="fade-down">
+					country application</h1>
+				<p class="text-uppercase text-white fs-5 text-spacing text-focus-in" data-aos="fade-up">Laurein &amp;
+					Fabio</p>
+				<p class="text-white fs-6 lh-1 text-focus-in" data-aos="fade-up">Advanced Frontend</p>
+			</div>
+		</div>
+	</div>
+</header>
+<!--Navigatie links met CSS en hover buttons -->
+<nav class="d-flex justify-content-center custom-links-nav shadow-sm">
+	<ul class="d-flex flex-column flex-md-row align-items-center justify-content-md-center list-unstyled">
+		<li class="mb-2 mb-md-0 me-md-3 text-uppercase">
+			<a href="index.html" class="menu-link">Home</a>
+		</li>
+		<li class="mb-2 mb-md-0 me-md-3 text-uppercase">
+			<a href="about.html" class="menu-link">About this app</a>
+		</li>
+		<li class="mb-2 mb-md-0 me-md-3 text-uppercase">
+			<a href="howtouse.html" class="menu-link">How to use this app</a>
+		</li>
+	</ul>
+</nav>
+<main class="scale-up-center">
+	<!--About the countrie app -->
+	<div class="container">
+		<div class="row custom-links-nav">
+			<div class="col"></div>
+			<div class="col-xl-6 text-center justify-content-center">
+				<h2 style="margin-bottom: 30px">About the Countrie App</h2>
+				<p class="mt-4">The Countrie App is an innovative and intuitive platform designed to help users explore and learn about countries from around the world. Whether you’re a geography enthusiast, a student, or simply someone with a curiosity about global cultures, the app provides a wealth of information in a format that is easy to navigate and engaging. It bridges the gap between curiosity and knowledge, offering comprehensive data on every country to users in a seamless experience.</p>
+			</div>
+			<div class="col"></div>
+		</div>
+		<section>
+			<div class="row" style="margin-top: 50px;">
+				<div class="col"></div>
+				<div class="col-xl-8 text-center justify-content-center">
+					<h2 class="mb-4">Key features of the Countrie App</h2>
+					<div class="accordion" role="tablist" id="accordion-1">
+						<div class="accordion-item">
+							<h2 class="accordion-header" role="tab"><button class="accordion-button collapsed text-bg-light" type="button" data-bs-toggle="collapse" data-bs-target="#accordion-1 .item-1" aria-expanded="false" aria-controls="accordion-1 .item-1"><br><strong>Comprehensive Country Profiles</strong></button></h2>
+							<div class="accordion-collapse collapse item-1" role="tabpanel" data-bs-parent="#accordion-1">
+								<div class="accordion-body">
+									<p class="text-start mb-0">One of the standout features of the Countrie App is its detailed country profiles. Each profile provides an in-depth look into a country’s identity, including its official name, population size, geographical location, and key demographic data. Users can also learn about political systems, economic structures, and cultural highlights, making the app a valuable tool for anyone seeking a deeper understanding of global diversity.The interactive world map is another central feature of the app, allowing users to visually explore countries and click on any location to access detailed information. This feature transforms learning into an engaging experience, making it ideal for educational purposes or casual exploration. The map is designed to be highly intuitive, inviting users to dive into geographical data in a way that feels natural and interactive.The Countrie App also includes powerful search and filtering capabilities. Users can find specific information by narrowing their search based on criteria like population size, geographic region, or economic indicators. This functionality is especially helpful for students and professionals conducting research or making comparisons between countries.<br><br></p>
+								</div>
+							</div>
+						</div>
+						<!--Accordion about the countrie app -->
+						<div class="accordion-item">
+							<h2 class="accordion-header" role="tab"><button class="accordion-button collapsed text-bg-light" type="button" data-bs-toggle="collapse" data-bs-target="#accordion-1 .item-2" aria-expanded="false" aria-controls="accordion-1 .item-2"><strong>Who Can Benefit from the Countrie App?</strong></button></h2>
+							<div class="accordion-collapse collapse item-2" role="tabpanel" data-bs-parent="#accordion-1">
+								<div class="accordion-body">
+									<p class="text-start mb-0">The Countrie App is a valuable resource for a wide range of users. Students and educators can rely on the app to provide accurate and comprehensive data for research projects, presentations, or classroom activities. Its user-friendly interface and interactive features make it an engaging tool for fostering a love of geography and global studies among learners.Travelers will find the app equally beneficial. It provides essential information about the countries they plan to visit, including cultural norms, population demographics, and languages spoken. By equipping users with this knowledge, the app enhances travel experiences and helps users feel more prepared and connected to their destinations.For professionals working in global industries, the app serves as a quick reference tool for understanding new markets or preparing for international collaborations. Its vast database of reliable information can be an asset for anyone involved in global business, economics, or diplomacy. Casual users who simply want to explore and learn about the world will also find the app highly engaging. With its easy-to-use design and wealth of fascinating facts, it turns curiosity into discovery.</p>
+								</div>
+							</div>
+						</div>
+						<div class="accordion-item">
+							<h2 class="accordion-header" role="tab"><button class="accordion-button text-bg-light" type="button" data-bs-toggle="collapse" data-bs-target="#accordion-1 .item-3" aria-expanded="true" aria-controls="accordion-1 .item-3"><strong>Why Choose the Countrie App?</strong></button></h2>
+							<div class="accordion-collapse collapse show item-3" role="tabpanel" data-bs-parent="#accordion-1">
+								<div class="accordion-body">
+									<p class="text-start mb-0">The Countrie App sets itself apart by delivering reliable information from trusted sources. All the data in the app is carefully curated and regularly updated to ensure accuracy. Its sleek, modern design makes it accessible to users of all technical skill levels, while the cross-platform availability ensures that users can access the app on iOS, Android, and web browsers.What makes the app particularly special is its balance between education and entertainment. Users can dive deep into the details of a country while enjoying the interactive elements of the app. The platform not only informs but also inspires a love for learning about the world.</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col"></div>
+			</div>
+		</section>
+	</div>
+</main>
+<footer class="footer-text">
+	<div class="text-center lh-3">
+		<h3>© Country Application</h3>
+		<p>Laurein & Fabio <br><em>Advanced Frontend 2024</em></p>
+	</div>
+</footer>
+
+
+
+
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+	// Initialisatie met AOS JavaScript
+	AOS.init({
+		offset: 120,
+		duration: 800,
+		easing: 'ease-in-out',
+		once: true
+	});
+</script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

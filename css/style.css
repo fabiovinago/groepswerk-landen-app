@@ -42,6 +42,29 @@ h3{
     transform: scale(1.05);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
+/*Custom links nav margin*/
+.custom-links-nav{
+    font-weight: bold;
+    margin-top: 100px;
+    padding-bottom: 20px;
+    font-size: 14px;
+}
+/*Standaardstijl voor de menu-links*/
+.menu-link {
+    text-decoration: none;
+    color: #0030aa;
+    padding: 5px 10px;
+    background-color: transparent;
+    transition: all 0.3s ease;
+    border-radius: 4px;
+}
+/*Hover-effect voor de menu-links*/
+.menu-link:hover {
+    background-color: rgba(0, 48, 170, 0.36);
+    color: white;
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
 /*Header img*/
 .bg-header{
     background-image: url("../img/coun-img.png");
