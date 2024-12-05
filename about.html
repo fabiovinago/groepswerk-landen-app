@@ -7,8 +7,10 @@
 	<meta content="ie=edge" http-equiv="X-UA-Compatible">
 	
 	<!--General SEO meta tags-->
-	<meta content="About page - Country Application: Search and view detailed information about countries." name="description">
-	<meta content="countries, flags, capitals, currency, population, geography, country information, world countries, country details, API" name="keywords">
+	<meta content="About page - Country Application: Search and view detailed information about countries."
+	      name="description">
+	<meta content="countries, flags, capitals, currency, population, geography, country information, world countries, country details, API"
+	      name="keywords">
 	<meta content="Laurein Demeyere and Fabio Vinago" name="author">
 	<meta content="index, follow" name="robots">
 	<meta content="no-cache" http-equiv="cache-control">
@@ -36,7 +38,8 @@
 				"streetAddress": "111 Oostnieuwkerksesteenweg",
 				"addressLocality": "Roeselare",
 				"postalCode": "8800",
-				"addressCountry": "BE"},
+				"addressCountry": "BE"
+			},
 			"description": "An application to view detailed information about countries around the world, including name, flag, capital, location, currency, and more.",
 			"url": "https://syntrawestcloud.be/fullstack/fabio",
 			"publisher": "Laurein and Fabio",
@@ -52,16 +55,18 @@
 	<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 	
 	<!--Leaflet.js cdn-->
-	<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin=""/>
-	<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+	<link crossorigin="" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+	      integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" rel="stylesheet"/>
+	<script crossorigin=""
+	        integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 	
 	<!--Axios cdn-->
 	<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 	
 	<!--Internal references-->
-	<script src="js/index.js" defer></script>
+	<script defer src="js/index.js"></script>
 	<link href="./css/style.css" rel="stylesheet">
-	<link rel="icon" href="./img/favicon.png" type="image/x-icon">
+	<link href="./img/favicon.png" rel="icon" type="image/x-icon">
 	
 	<title>About Page - Country Application Advanced Frontend Laurein en Fabio</title>
 </head>
@@ -82,18 +87,21 @@
 	</div>
 </header>
 <!--Navigatie links met CSS en hover buttons -->
-<nav class="d-flex justify-content-center custom-links-nav shadow-sm">
-	<ul class="d-flex flex-column flex-md-row align-items-center justify-content-md-center list-unstyled">
-		<li class="mb-2 mb-md-0 me-md-3 text-uppercase">
-			<a href="index.html" class="menu-link">Home</a>
-		</li>
-		<li class="mb-2 mb-md-0 me-md-3 text-uppercase">
-			<a href="about.html" class="menu-link">About this app</a>
-		</li>
-		<li class="mb-2 mb-md-0 me-md-3 text-uppercase">
-			<a href="howtouse.html" class="menu-link">How to use this app</a>
-		</li>
-	</ul>
+<nav class="navbar navbar-expand-md shadow-sm py-5">
+	<div class="container-fluid">
+		<button class="navbar-toggler" data-bs-target="#navcol-1" data-bs-toggle="collapse"><span
+				class="visually-hidden">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
+		<div class="collapse navbar-collapse justify-content-center" id="navcol-1">
+			<ul class="navbar-nav">
+				<li class="nav-item" style="margin-right: 50px;"><a class="nav-link fw-bolder menu-link"
+				                                                    href="index.html">HOME</a></li>
+				<li class="nav-item" style="margin-right: 50px;"><a class="nav-link fw-bolder menu-link"
+				                                                    href="about.html">ABOUT THIS APP</a></li>
+				<li class="nav-item" style="margin-right: 50px;"><a class="nav-link fw-bolder menu-link"
+				                                                    href="howtouse.html">HOW TO USE THIS APP</a></li>
+			</ul>
+		</div>
+	</div>
 </nav>
 <main class="scale-up-center">
 	<!--About the countrie app -->
@@ -102,7 +110,11 @@
 			<div class="col"></div>
 			<div class="col-xl-6 text-center justify-content-center">
 				<h2 style="margin-bottom: 30px">About the Countrie App</h2>
-				<p class="mt-4">The Countrie App is an innovative and intuitive platform designed to help users explore and learn about countries from around the world. Whether you’re a geography enthusiast, a student, or simply someone with a curiosity about global cultures, the app provides a wealth of information in a format that is easy to navigate and engaging. It bridges the gap between curiosity and knowledge, offering comprehensive data on every country to users in a seamless experience.</p>
+				<p class="mt-4">The Countrie App is an innovative and intuitive platform designed to help users explore
+					and learn about countries from around the world. Whether you’re a geography enthusiast, a student,
+					or simply someone with a curiosity about global cultures, the app provides a wealth of information
+					in a format that is easy to navigate and engaging. It bridges the gap between curiosity and
+					knowledge, offering comprehensive data on every country to users in a seamless experience.</p>
 			</div>
 			<div class="col"></div>
 		</div>
@@ -111,29 +123,86 @@
 				<div class="col"></div>
 				<div class="col-xl-8 text-center justify-content-center">
 					<h2 class="mb-4">Key features of the Countrie App</h2>
-					<div class="accordion" role="tablist" id="accordion-1">
+					<div class="accordion" id="accordion-1" role="tablist">
 						<div class="accordion-item">
-							<h2 class="accordion-header" role="tab"><button class="accordion-button collapsed text-bg-light" type="button" data-bs-toggle="collapse" data-bs-target="#accordion-1 .item-1" aria-expanded="false" aria-controls="accordion-1 .item-1"><br><strong>Comprehensive Country Profiles</strong></button></h2>
-							<div class="accordion-collapse collapse item-1" role="tabpanel" data-bs-parent="#accordion-1">
+							<h2 class="accordion-header" role="tab">
+								<button aria-controls="accordion-1 .item-1" aria-expanded="false"
+								        class="accordion-button collapsed text-bg-light" data-bs-target="#accordion-1 .item-1"
+								        data-bs-toggle="collapse" type="button"><br><strong>Comprehensive
+									Country Profiles</strong></button>
+							</h2>
+							<div class="accordion-collapse collapse item-1" data-bs-parent="#accordion-1"
+							     role="tabpanel">
 								<div class="accordion-body">
-									<p class="text-start mb-0">One of the standout features of the Countrie App is its detailed country profiles. Each profile provides an in-depth look into a country’s identity, including its official name, population size, geographical location, and key demographic data. Users can also learn about political systems, economic structures, and cultural highlights, making the app a valuable tool for anyone seeking a deeper understanding of global diversity.The interactive world map is another central feature of the app, allowing users to visually explore countries and click on any location to access detailed information. This feature transforms learning into an engaging experience, making it ideal for educational purposes or casual exploration. The map is designed to be highly intuitive, inviting users to dive into geographical data in a way that feels natural and interactive.The Countrie App also includes powerful search and filtering capabilities. Users can find specific information by narrowing their search based on criteria like population size, geographic region, or economic indicators. This functionality is especially helpful for students and professionals conducting research or making comparisons between countries.<br><br></p>
+									<p class="text-start mb-0">One of the standout features of the Countrie App is its
+										detailed country profiles. Each profile provides an in-depth look into a
+										country’s identity, including its official name, population size, geographical
+										location, and key demographic data. Users can also learn about political
+										systems, economic structures, and cultural highlights, making the app a valuable
+										tool for anyone seeking a deeper understanding of global diversity.The
+										interactive world map is another central feature of the app, allowing users to
+										visually explore countries and click on any location to access detailed
+										information. This feature transforms learning into an engaging experience,
+										making it ideal for educational purposes or casual exploration. The map is
+										designed to be highly intuitive, inviting users to dive into geographical data
+										in a way that feels natural and interactive.The Countrie App also includes
+										powerful search and filtering capabilities. Users can find specific information
+										by narrowing their search based on criteria like population size, geographic
+										region, or economic indicators. This functionality is especially helpful for
+										students and professionals conducting research or making comparisons between
+										countries.<br><br></p>
 								</div>
 							</div>
 						</div>
 						<!--Accordion about the countrie app -->
 						<div class="accordion-item">
-							<h2 class="accordion-header" role="tab"><button class="accordion-button collapsed text-bg-light" type="button" data-bs-toggle="collapse" data-bs-target="#accordion-1 .item-2" aria-expanded="false" aria-controls="accordion-1 .item-2"><strong>Who Can Benefit from the Countrie App?</strong></button></h2>
-							<div class="accordion-collapse collapse item-2" role="tabpanel" data-bs-parent="#accordion-1">
+							<h2 class="accordion-header" role="tab">
+								<button aria-controls="accordion-1 .item-2" aria-expanded="false"
+								        class="accordion-button collapsed text-bg-light" data-bs-target="#accordion-1 .item-2"
+								        data-bs-toggle="collapse" type="button"><strong>Who Can
+									Benefit from the Countrie App?</strong></button>
+							</h2>
+							<div class="accordion-collapse collapse item-2" data-bs-parent="#accordion-1"
+							     role="tabpanel">
 								<div class="accordion-body">
-									<p class="text-start mb-0">The Countrie App is a valuable resource for a wide range of users. Students and educators can rely on the app to provide accurate and comprehensive data for research projects, presentations, or classroom activities. Its user-friendly interface and interactive features make it an engaging tool for fostering a love of geography and global studies among learners.Travelers will find the app equally beneficial. It provides essential information about the countries they plan to visit, including cultural norms, population demographics, and languages spoken. By equipping users with this knowledge, the app enhances travel experiences and helps users feel more prepared and connected to their destinations.For professionals working in global industries, the app serves as a quick reference tool for understanding new markets or preparing for international collaborations. Its vast database of reliable information can be an asset for anyone involved in global business, economics, or diplomacy. Casual users who simply want to explore and learn about the world will also find the app highly engaging. With its easy-to-use design and wealth of fascinating facts, it turns curiosity into discovery.</p>
+									<p class="text-start mb-0">The Countrie App is a valuable resource for a wide range
+										of users. Students and educators can rely on the app to provide accurate and
+										comprehensive data for research projects, presentations, or classroom
+										activities. Its user-friendly interface and interactive features make it an
+										engaging tool for fostering a love of geography and global studies among
+										learners.Travelers will find the app equally beneficial. It provides essential
+										information about the countries they plan to visit, including cultural norms,
+										population demographics, and languages spoken. By equipping users with this
+										knowledge, the app enhances travel experiences and helps users feel more
+										prepared and connected to their destinations.For professionals working in global
+										industries, the app serves as a quick reference tool for understanding new
+										markets or preparing for international collaborations. Its vast database of
+										reliable information can be an asset for anyone involved in global business,
+										economics, or diplomacy. Casual users who simply want to explore and learn about
+										the world will also find the app highly engaging. With its easy-to-use design
+										and wealth of fascinating facts, it turns curiosity into discovery.</p>
 								</div>
 							</div>
 						</div>
 						<div class="accordion-item">
-							<h2 class="accordion-header" role="tab"><button class="accordion-button text-bg-light" type="button" data-bs-toggle="collapse" data-bs-target="#accordion-1 .item-3" aria-expanded="true" aria-controls="accordion-1 .item-3"><strong>Why Choose the Countrie App?</strong></button></h2>
-							<div class="accordion-collapse collapse show item-3" role="tabpanel" data-bs-parent="#accordion-1">
+							<h2 class="accordion-header" role="tab">
+								<button aria-controls="accordion-1 .item-3" aria-expanded="true" class="accordion-button text-bg-light"
+								        data-bs-target="#accordion-1 .item-3" data-bs-toggle="collapse"
+								        type="button"><strong>Why Choose the Countrie
+									App?</strong></button>
+							</h2>
+							<div class="accordion-collapse collapse item-3" data-bs-parent="#accordion-1"
+							     role="tabpanel">
 								<div class="accordion-body">
-									<p class="text-start mb-0">The Countrie App sets itself apart by delivering reliable information from trusted sources. All the data in the app is carefully curated and regularly updated to ensure accuracy. Its sleek, modern design makes it accessible to users of all technical skill levels, while the cross-platform availability ensures that users can access the app on iOS, Android, and web browsers.What makes the app particularly special is its balance between education and entertainment. Users can dive deep into the details of a country while enjoying the interactive elements of the app. The platform not only informs but also inspires a love for learning about the world.</p>
+									<p class="text-start mb-0">The Countrie App sets itself apart by delivering reliable
+										information from trusted sources. All the data in the app is carefully curated
+										and regularly updated to ensure accuracy. Its sleek, modern design makes it
+										accessible to users of all technical skill levels, while the cross-platform
+										availability ensures that users can access the app on iOS, Android, and web
+										browsers.What makes the app particularly special is its balance between
+										education and entertainment. Users can dive deep into the details of a country
+										while enjoying the interactive elements of the app. The platform not only
+										informs but also inspires a love for learning about the world.</p>
 								</div>
 							</div>
 						</div>
@@ -146,15 +215,15 @@
 </main>
 <footer class="footer-text">
 	<div class="text-center lh-3">
-		<h3>© Country Application</h3>
+		<h3>Country Application</h3>
+		<p>
+			<a class="text-decoration-none" href="https://restcountries.com/" target="_blank">
+				&copy; REST Countries
+			</a>
+		</p>
 		<p>Laurein & Fabio <br><em>Advanced Frontend 2024</em></p>
 	</div>
 </footer>
-
-
-
-
-
 
 
 <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
