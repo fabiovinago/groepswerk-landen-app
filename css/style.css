@@ -38,8 +38,8 @@ h3{
     transition: all 0.3s ease;
 }
 .btn-primary:hover {
-    background-color: rgba(0, 48, 170, 0.36);
-    transform: scale(1.05);
+    background-color: rgb(1, 28, 89);
+    transform: scale(1);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 /*Custom links nav margin*/
@@ -52,7 +52,7 @@ h3{
 /*Standaardstijl voor de menu-links*/
 .menu-link {
     text-decoration: none;
-    color: #0030aa;
+    color: rgb(1, 28, 89);
     padding: 5px 10px;
     background-color: transparent;
     transition: all 0.3s ease;
@@ -60,17 +60,20 @@ h3{
 }
 /*Hover-effect voor de menu-links*/
 .menu-link:hover {
-    background-color: rgba(0, 48, 170, 0.36);
+    background-color: rgb(1, 28, 89);
     color: white;
-    transform: scale(1.05);
+    transform: scale(1);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 /*Header img*/
-.bg-header{
-    background-image: url("../img/coun-img.png");
+.bg-header {
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0)) ,
+    url("../img/countrie-map.jpg");
     background-repeat: no-repeat;
     background-size: cover;
+    height: 400px;
 }
+
 /*Custom margin header*/
 .header-margin{
     margin: 70px;
@@ -79,9 +82,12 @@ h3{
 .input-margin{
     margin-top: 100px;
 }
+.margin-title{
+    margin: 100px 0 100px 0;
+}
 /*Letter spacing*/
 .text-spacing{
-    letter-spacing: 10px;
+    letter-spacing: 5px;
 }
 .card-image{
     height: 200px !important;
